@@ -1,0 +1,24 @@
+<a href="/teacher/viewall" class="btn btn-info" style="margin-top:5px;">Back</a>
+<h4>Editing Form for Student :<%= result[0].sname %> </h4>
+<form method="POST" class="addStu" autocomplete="off">
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Roll No. : </label>
+    <input type="text" name="roll" required class="form-control"  value="<%= result[0].roll  %> " id="exampleInputEmail1" >
+  </div> 
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Name : </label>
+      <input type="text" name="sname" min="3" required class="form-control" value="<%= result[0].sname  %> " id="exampleInputEmail1">
+    </div>
+         
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Date of Birth : </label>
+        <input type="date" name="dob"   required class="form-control" value="<%= result[0].dob  %> "  id="exampleInputEmail1">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Score : </label>
+        <input type="text" name="score"  required class="form-control" value="<%= result[0].score.toString()  %> " id="exampleInputEmail1">
+      </div>
+    <button type="submit" class="btn btn-success">Update</button>
+</form>
+
